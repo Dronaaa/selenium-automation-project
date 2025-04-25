@@ -1,27 +1,26 @@
-# Importing necessary modules from Selenium
-from selenium import webdriver  # To control the browser
-from selenium.webdriver.common.by import By  # To locate elements on the page
-from selenium.webdriver.common.keys import Keys  # To simulate keyboard actions
-import time  # To add delays
+from selenium import webdriver
+from selenium.webdriver.common.by import By  
+from selenium.webdriver.common.keys import Keys  
+import time
 
-# Step 1: Launch Chrome browser
-driver = webdriver.Chrome()  # This opens a new Chrome browser window
-driver.maximize_window()  # Maximizes the browser window for better visibility
+#Launching Chrome browser
+driver = webdriver.Chrome()
+driver.maximize_window()
 
-# Step 2: Open the Google homepage
-driver.get("https://www.google.com")  # Navigates to Google's homepage
+# Open the Google homepage
+driver.get("https://www.google.com") 
 
-# Step 3: Find the search input box using its 'name' attribute
-search_box = driver.find_element(By.NAME, "q")  # Locates the search box element
+#  Find the search input box using its 'name' attribute
+search_box = driver.find_element(By.NAME, "q") 
 
-# Step 4: Type a search query into the box
-search_box.send_keys("Selenium automation with Python")  # Types the query into the box
+#Type a search query into the box
+search_box.send_keys("Selenium automation with Python") 
 
-# Step 5: Press 'Enter' to start the search
-search_box.send_keys(Keys.RETURN)  # Simulates pressing the Enter key
+#Press 'Enter' to start the search
+search_box.send_keys(Keys.RETURN) 
 
-# Step 6: Wait for 5 seconds so we can see the results
-time.sleep(5)  # Waits for 5 seconds (adjustable if needed)
+#Wait for 5 seconds so we can see the results
+time.sleep(5)
 
-# Step 7: Close the browser
-driver.quit()  # Closes the browser window and ends the session
+#Close the browser
+driver.quit() 
